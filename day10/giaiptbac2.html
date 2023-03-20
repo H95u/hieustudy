@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let a = +prompt("nhập vào số a")
+let b = +prompt("nhập vào số b")
+let c = +prompt("nhập vào số c")
+let delta = b*b - 4*a*c
+if (a === 0)
+    alert("nhập sai")
+else if ( delta < 0)
+    alert("phương trình vô nghiệm")
+else if (delta === 0)
+    let x = -b / 2*a
+    alert("phương trình có nghiệm kép : " + x )
+
+</script>
+
+</body>
+</html>

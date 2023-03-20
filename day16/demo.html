@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function isPalindrome(word) {
+    // Nếu từ có độ dài nhỏ hơn 2, ta coi từ đó là từ đối xứng
+    if (word.length < 2) {
+      return true;
+    }
+    // Nếu ký tự đầu tiên khác ký tự cuối cùng, ta coi từ đó không phải là từ đối xứng
+    else if (word.charAt(0) !== word.charAt(word.length - 1)) {
+      return false;
+    }
+    // Nếu không, ta tiếp tục kiểm tra đối xứng của các ký tự bên trong
+    else {
+      return isPalindrome(word.substring(1, word.length - 1));
+    }
+  }
+ let kq = isPalindrome("rrtyrbfr");
+alert(kq)
+
+</script>
+</body>
+</html>

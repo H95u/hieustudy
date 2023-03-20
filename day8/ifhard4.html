@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  inputNumber1 = prompt("nhập số thứ 1")
+  inputNumber2 = prompt("nhập số thứ 2")
+  inputNumber3 = prompt("nhập số thứ 3")
+
+  if (isNaN(inputNumber1) || isNaN(inputNumber2) || isNaN(inputNumber3) )
+    alert("nhập sai")
+  else if (inputNumber1>inputNumber2 && inputNumber1 > inputNumber3)
+    alert("số " +inputNumber1+" là max")
+  else if (inputNumber1 < inputNumber2 && inputNumber2 > inputNumber3)
+    alert("số " +inputNumber2+" là max")
+  else
+      alert("số " +inputNumber3+" là max")
+
+
+
+</script>
+
+</body>
+</html>

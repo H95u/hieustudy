@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhập vào số a")
+    let b = +prompt("nhập vào số b")
+    let tong = a + b
+    let hieu = a - b
+    let thuong = a / b
+    let tich = a * b
+    let ketqua = (a * a) * (b * b)
+    let ketqua1 = a % b
+    if (b === 0 || a ===0) {
+        alert("nhập sai")
+    } else {
+        document.write(a + "+" + b + "=" + tong +"<br>")
+        document.write(a + "-" + b + "=" + hieu+"<br>")
+        document.write(a + "/" + b + "=" + thuong+"<br>")
+        document.write(a + "*" + b + "=" + tich+"<br>")
+        document.write(a + "^2" +"+"+ b+"^2" + "=" + ketqua+"<br>")
+        document.write(a + "%" + b + "=" + ketqua1+"<br>")
+
+    }
+
+</script>
+
+</body>
+</html>

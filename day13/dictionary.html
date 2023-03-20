@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input">
+<button onclick="dich()">Dịch</button>
+<p id="result"></p>
+<script>
+    function dich() {
+        let arr_eng = ["book", "pencil", "banana", "orange", "apple", "mobile"]
+        let arr_vie = ["sách", "bút chì", "chuối", "cam", "táo", "điện thoại"]
+        let input = document.getElementById('input').value;
+        let index = 0;
+        let result = "";
+        for (let i = 0; i < arr_eng.length; i++) {
+            if (input === arr_eng[i]) {
+                index = i
+            }
+        }
+        for (let j = 0; j < arr_vie.length; j++) {
+            if (index === j) {
+                result = arr_vie[j]
+            }
+        }
+        document.getElementById('result').innerHTML = result
+    }
+</script>
+</body>
+</html>

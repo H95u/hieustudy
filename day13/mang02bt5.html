@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [1, 2, 3];
+    let b = [1, 2, 4];
+
+    if (a.length !== b.length) {
+        console.log("Hai mảng không giống nhau");
+    } else {
+        let isEqual = true;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] !== b[i]) {
+                isEqual = false;
+            }
+        }
+        if (isEqual) {
+            console.log("Hai mảng giống nhau");
+        } else {
+            console.log("Hai mảng không giống nhau");
+        }
+    }
+</script>
+
+</body>
+</html>

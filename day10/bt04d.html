@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thế kỷ</title>
+</head>
+<body>
+<input id="inputNum1" placeholder="nhập vào số năm">
+<button onclick="cal()">Tính</button>
+<p id="result"></p>
+<script>
+    function cal() {
+        let a = +document.getElementById("inputNum1").value;
+        let theKy = Math.ceil(a/100);
+        document.getElementById('result').innerHTML = "năm " +a + " thuộc thế kỷ " +theKy;
+    }
+</script>
+</body>
+</html>

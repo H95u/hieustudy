@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input">
+<button onclick="bt2()">OK</button>
+<p id="result"></p>
+
+</body>
+<script>
+  function bt2() {
+    let input = +document.getElementById('input').value;
+
+      if ( input === -1){
+          result = "chương trình kết thúc"
+      }
+     else if (input % 2 === 0) {
+      result = "hello"
+    } else{
+      result = "nhập lại"
+    }
+      document.getElementById('result').innerHTML = result;
+  }
+
+
+
+</script>
+</html>

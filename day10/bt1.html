@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form >
+ Username <input type="text" id="username"><br>
+  Password <input type="text" id="password"><br>
+  <button type="submit" id="submitBtn" onclick="login()">Login</button>
+</form>
+</body>
+<script>
+  function login() {
+    let userName = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (userName === "admin" && password === "123") {
+      alert("Đăng nhập tài khoản admin")
+    } else if (userName === "user" && password === "123")
+      alert("Đăng nhập tài khoản user")
+    else
+      alert("Tài khoản không tồn tại")
+  }
+  </script>
+</html>

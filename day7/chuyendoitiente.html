@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi tien te</title>
+    <script src="chuyendoitiente.js"></script>
+</head>
+<body>
+<p>amount</p>
+<label for="amount"></label><input type="number" id="amount">
+<p>from currency</p>
+<label for="from"></label><select id="from">
+    <option value="23720">VND</option>
+    <option value="1">USD</option>
+    <option value="6.95">NDT</option>
+</select>
+<p>to currency</p>
+<label for="to"></label><select id="to">
+    <option value="1">USD</option>
+    <option value="23720">VND</option>
+    <option value="6.95">NDT</option>
+</select>
+<p>
+    <button type="button" name="convertBtn" id="convert" onclick="change()">Convert</button>
+</p>
+<h3>Result:</h3>
+<p id="result"></p>
+
+</body>
+</html>

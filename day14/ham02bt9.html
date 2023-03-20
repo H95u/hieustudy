@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function countChar(arr, c) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === c) {
+                count++;
+            }
+        }
+        return count !== 0 ? count : -1;
+    }
+
+    arr = [1, 2, 3, 4, 4,"a"]
+
+    document.write(countChar(arr, 6))
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+  let tong = 0;
+  for (let i = 0; i < 500; i++) {
+    // kiểm tra số i có là snt hay không: đúng => tính tổng
+    let a = i;
+    for (let i = 2; i <= a; i++) {
+      if(i === a) {
+        document.write("là snt");
+        tong += a;
+        break;
+      }
+
+      if(a % i === 0) {
+        document.write("không là snt");
+        break;
+      }
+    }
+  }
+  document.write(tong)
+
+</script>
+
+</body>
+</html>

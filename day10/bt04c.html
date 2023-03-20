@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="inputNum1" placeholder="nhập vào số a">
+<input id="inputNum2" placeholder="nhập vào số b">
+<button onclick="cal()">tính</button>
+<p id="result"></p>
+
+
+</body>
+<script>
+    function cal() {
+        let a = +document.getElementById("inputNum1").value;
+        let b = +document.getElementById("inputNum2").value;
+        let tong = ((b - a + 1) * (a + b)) / 2;
+        if (b < a)
+            document.getElementById('result').innerHTML = "nhập sai";
+        else if (a === b)
+            document.getElementById('result').innerHTML = a;
+        else
+
+            document.getElementById("result").innerHTML = "tổng các số từ a đến b là : " + tong;
+
+
+    }
+
+</script>
+</html>

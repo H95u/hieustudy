@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = [];
+
+  for (let i = 0; i < 10; i++) {
+    let rand = Math.floor(Math.random() * 2); // tạo số ngẫu nhiên 0 hoặc 1
+    if (rand === 0) {
+      let charCode = Math.floor(Math.random() * 26) + 97; // tạo mã ASCII ngẫu nhiên từ 97 đến 122 (a - z)
+      let char = String.fromCharCode(charCode); // chuyển đổi mã ASCII thành ký tự tương ứng
+      arr.push(char);
+    } else {
+      let num = Math.floor(Math.random() * 10); // tạo số ngẫu nhiên từ 0 đến 9
+      arr.push(num);
+    }
+  }
+
+  console.log(arr);
+  let size = arr.length;
+  let count = 0;
+
+
+  for (let i = 0; i < size; i++) {
+    if (!isNaN(arr[i])) {
+      count++;
+    }
+  }
+  console.log("kích thước của mảng là : " + size)
+  console.log("Số ký tự số trong mảng là: " + count);
+
+</script>
+</body>
+</html>

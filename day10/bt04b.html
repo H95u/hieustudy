@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="inputNum1" placeholder="nhập vào số a">
+<input id="inputNum2" placeholder="nhập vào số b">
+<button onclick="cal()">tính</button>
+<p id="result"></p>
+<p id="result1"></p>
+
+</body>
+<script>
+    function cal() {
+        let inputNum1 = document.getElementById("inputNum1").value;
+        let inputNum2 = document.getElementById("inputNum2").value;
+        let result = Math.pow(inputNum1, 2);
+        let result1 = Math.pow(inputNum1, inputNum2);
+        document.getElementById('result').innerHTML = " a ^2 = "  + result;
+        document.getElementById('result1').innerHTML = "a ^b = " + result1;
+
+    }
+</script>
+</html>

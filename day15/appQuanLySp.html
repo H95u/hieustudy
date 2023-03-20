@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="appQuanLySp.css">
+    <script src="appQuanLySp.js"></script>
+</head>
+<body>
+<div>
+    <h3>Add New Product</h3>
+    <label for="newProduct"></label><input id="newProduct" placeholder="New Product">
+    <button id="addBtn" value="" onclick="addProduct(document.getElementById('newProduct').value)">Add</button>
+    <br>
+    <button onclick="showProduct()">Show</button>
+    <br>
+
+    <div id="product-list"></div>
+
+</div>
+
+</body>
+</html>

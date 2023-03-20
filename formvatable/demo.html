@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Đặt xe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Đặt xe của bạn</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Tính năng</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#" class="login-btn">Đăng nhập</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <form>
+
+        <label for="departure">Điểm xuất phát:</label>
+        <select name="departure" id="departure">
+            <option value="">--Chọn tỉnh thành phố--</option>
+            <option value="hanoi">Hà Nội</option>
+            <option value="hochiminh">Hồ Chí Minh</option>
+            <option value="danang">Đà Nẵng</option>
+            <option value="nhatrang">Nha Trang</option>
+            <!--Thêm các tùy chọn cho các tỉnh thành phố khác-->
+        </select>
+        <label for="destination">Điểm đến:</label>
+        <select name="destination" id="destination">
+            <option value="Hà Nội">Hà Nội</option>
+            <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+            <option value="Đà Nẵng">Đà Nẵng</option>
+            <option value="Huế">Huế</option>
+            <option value="Hải Phòng">Hải Phòng</option>
+            <option value="Nha Trang">Nha Trang</option>
+            <option value="Phan Thiết">Phan Thiết</option>
+            <option value="Đà Lạt">Đà Lạt</option>
+            <option value="Vũng Tàu">Vũng Tàu</option>
+        </select>
+        <label for="date">Ngày:</label>
+        <input type="date" id="date" name="date">
+        <label for="time">Giờ:</label>
+        <input type="time" id="time" name="time">
+        <button type="submit">Đặt xe</button>
+    </form>
+</main>
+<footer>
+    <p>&copy; 2023 Đặt xe</p>
+</footer>
+</body>
+</html>

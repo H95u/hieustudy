@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>laysurveykh</title>
+</head>
+<body>
+<form>
+    <h1>Market research survey</h1>
+    <p>please take a few moment to complete this satisfaction survey.</p>
+    <hr>
+    <h3>What is your age range?</h3>
+    <select>
+        <option>18-24</option>
+        <option>25-34</option>
+        <option>35-50</option>
+        <option>50+</option>
+    </select>
+    <h3>What is your yearly income range?</h3>
+    <select>
+        <option>$0 - $25000</option>
+        <option>$25001 - $50000</option>
+        <option>$50001 - $100000</option>
+        <option>$100000 +</option>
+    </select>
+    <h3>gender identity</h3>
+    <input type="radio" name="sex"> Male <br>
+    <input type="radio" name="sex">Female<br>
+    <input type="radio" name="sex">Nonbinary<br>
+    <label for="hoten">Other</label><input type="text" name="hoten" id="hoten"><br>
+    <h3>Which of the following products have your purchased in the last 2 months. Please check all that apply.</h3>
+    <input type="checkbox" name="product"> Product 1<br>
+    <input type="checkbox" name="product"> Product 2<br>
+    <input type="checkbox" name="product"> Product 3<br>
+    <h3>How often would you use our new product?</h3>
+    <input type="radio" name="frequency">Daily<br>
+    <input type="radio" name="frequency">Weekly<br>
+    <input type="radio" name="frequency">Monthly<br>
+    <h3>What would you pay for the new product?</h3>
+    $<input type="text" placeholder="Dollars">.<input type="text" placeholder="Cents">
+    <h3>What features would you like to see in the new product.</h3>
+    <textarea cols="100" rows="8"> </textarea>
+    <p>Please rate your level of agreement with the following statements.</p>
+    <table border="1">
+        <tr>
+            <th>----------------</th>
+            <th>Strongly disagree</th>
+            <th>Disagree</th>
+            <th>Agree</th>
+            <th>Strongly disagree</th>
+
+        </tr>
+        <tr>
+            <th>our products are priced fairly.</th>
+            <th><input type="radio" name="tr1"><br>1</th>
+            <th><input type="radio" name="tr1"><br>2</th>
+            <th><input type="radio" name="tr1"><br>3</th>
+            <th><input type="radio" name="tr1"><br>4</th>
+
+        </tr>
+        <tr>
+            <th>our products are high quality.</th>
+            <th><input type="radio" name="tr2"><br>1</th>
+            <th><input type="radio" name="tr2"><br>2</th>
+            <th><input type="radio" name="tr2"><br>3</th>
+            <th><input type="radio" name="tr2"><br>4</th>
+
+        </tr>
+        <tr>
+            <th>You would recommend our products to a friend or coworker.</th>
+            <th><input type="radio" name="tr3"><br>1</th>
+            <th><input type="radio" name="tr3"><br>2</th>
+            <th><input type="radio" name="tr3"><br>3</th>
+            <th><input type="radio" name="tr3"><br>4</th>
+            <br>
+
+        </tr>
+
+
+    </table>
+    <input type="submit" name="btnsubmit">
+</form>
+
+
+</body>
+</html>

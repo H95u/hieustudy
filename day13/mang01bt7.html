@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = [];
+  for (let i = 0; i < 10; i++) {
+    arr.push(Math.floor(Math.random() * 10));
+  }
+  console.log(arr)
+  let uniqueArr = [...new Set(arr)];
+  console.log(uniqueArr)
+
+  let V = parseInt(prompt("Nhập giá trị V: "));
+  let index = arr.indexOf(V);
+  if (index !== -1) {
+    arr.splice(index, 1);
+    arr.push(0);
+    console.log("Đã xoá " + V + " khỏi mảng. Mảng mới là: " + arr);
+  } else {
+    console.log(V + " không thuộc mảng.");
+  }
+
+
+
+</script>
+
+</body>
+</html>

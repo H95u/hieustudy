@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="inputNum1" placeholder="nhập vào cạnh a">
+<input id="inputNum2" placeholder="nhập vào cạnh b">
+<input id="inputNum3" placeholder="nhập vào cạnh c">
+<button onclick="cal()">Kiểm tra</button>
+<p id="result"></p>
+
+</body>
+<script>
+    function cal() {
+        let a = document.getElementById('inputNum1').value;
+        let b = document.getElementById('inputNum2').value;
+        let c = document.getElementById('inputNum3').value;
+        if (a <= 0|| b <= 0 || c <= 0 )
+            document.getElementById('result').innerHTML="nhập sai"
+        else if (a + b > c && a+c>b && b+c>a)
+            document.getElementById('result').innerHTML="ba cạnh lập thành một tam giác"
+        else if (a === b && b !== c || a === c && c !== b || b === c && c !== a)
+            document.getElementById('result').innerHTML="ba cạnh lập thành một tam giác cân"
+        else
+            document.getElementById('result').innerHTML="ba cạnh không lập thành tam giác"
+    }
+
+</script>
+</html>

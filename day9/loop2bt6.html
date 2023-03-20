@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+// Kích thước của trái tim
+const size = 10;
+
+// Vẽ trái tim
+for (let row = 0; row < size; row++) {
+let line = '';
+for (let col = 0; col < size; col++) {
+// Kiểm tra vị trí của dấu sao
+if ((row === 0 && col % 2 === 1) ||
+(row === 1 && (col === 1 || col === size - 2)) ||
+(row === 2 && (col === 0 || col === size - 1)) ||
+(row === 3 && (col === 0 || col === size - 1)) ||
+(row === 4 && (col === 0 || col === size - 1)) ||
+(row === 5 && (col === 0 || col === size - 1)) ||
+(row > 5 && row < size - 1 && (col === 1 || col === size - 2)) ||
+(row === size - 1 && col % 2 === 0)) {
+line += '*';
+} else {
+line += ' ';
+}
+}
+console.log(line);
+}
+</script>
+
+
+</body>
+</html>

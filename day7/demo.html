@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+  <title>Máy tính</title>
+
+
+
+
+</head>
+<body>
+<h1>Calculator</h1>
+<table>
+  <tr>
+    <td colspan="4">
+      <input type="text" id="result" disabled>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="7" onclick="input('7')">
+    </td>
+    <td>
+      <input type="button" value="8" onclick="input('8')">
+    </td>
+    <td>
+      <input type="button" value="9" onclick="input('9')">
+    </td>
+    <td>
+      <input type="button" value="/" onclick="op('/')">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="4" onclick="input('4')">
+    </td>
+    <td>
+      <input type="button" value="5" onclick="input('5')">
+    </td>
+    <td>
+      <input type="button" value="6" onclick="input('6')">
+    </td>
+    <td>
+      <input type="button" value="*" onclick="op('*')">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="1" onclick="input('1')">
+    </td>
+    <td>
+      <input type="button" value="2" onclick="input('2')">
+    </td>
+    <td>
+      <input type="button" value="3" onclick="input('3')">
+    </td>
+    <td>
+      <input type="button" value="-" onclick="op('-')">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="button" value="0" onclick="input('0')">
+    </td>
+    <td>
+      <input type="button" value="." onclick="input('.')">
+    </td>
+    <td>
+      <input type="button" value="=" onclick="calculate('=')">
+    </td>
+    <td>
+      <input type="button" value="+" onclick="op('+')">
+    </td>
+
+  </tr>
+  <tr>
+    <td colspan="4">
+      <input type="button" value="Clear" onclick="clearInput()">
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+<script>
+  // Khai báo biến toàn cục
+  var input1 = "";
+  var input2 = "";
+  var operator = "";
+  var result = "";
+
+  // Hàm thêm số vào ô nhập liệu
+  function input(number) {
+    if (operator === "") {
+      input1 += number;
+      document.getElementById("result").value = input1;
+    } else {
+      input2 += number;
+      document.getElementById("result").value = input2;
+    }
+  }
+
+  // Hàm chọn toán tử
+  function operator(op) {
+    if (input1 === "") {
+      alert("Please enter a number first!");
+    } else {
+      operator = op;
+      document.getElementById("result").value = "";
+    }
+  }
+
+  // Hàm tính toán kết quả
+  function calculate() {
+    if (input1 === "" || input2 === "") {
+      alert("Please enter two numbers to calculate!");
+    } else {
+      switch(op) {
+        case "+":
+          result = Number(input1) + Number(input2);
+          break;
+        case "-":
+          result = input1 - input2;
+          break;
+        case "*":
+          result = input1 * input2;
+          break;
+        case "/":
+          if (input2 === "0") {
+            alert("Cannot divide by zero!");
+          } else {
+            result = input1 / input2;
+          }
+          break;
+        default:
+          alert("Invalid operator!");
+      }
+      document.getElementById("result").value = result;
+    }
+  }
+
+  // Hàm xóa nội dung ô nhập liệu
+  function clearInput() {
+    input1 = "";
+    input2 = "";
+    operator = "";
+    result = "";
+    document.getElementById("result").value = "";
+  }
+</script>
+

@@ -1,0 +1,5 @@
+button {background-color: springgreen; border-radius: 5px}
+table {width: 500px; border-collapse: collapse}
+table tr:nth-child(odd) {
+    background: silver;
+}

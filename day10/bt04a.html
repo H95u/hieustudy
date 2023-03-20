@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="inputNum" placeholder="nhập vào độ dài cạnh a của hình vuông" >
+<button type="button" id="calBtn" onclick="calculate()">Tính</button>
+<p id="result"></p>
+<p id="result1"></p>
+
+</body>
+<script>
+    function calculate(){
+        let inputNum = document.getElementById("inputNum").value;
+        let result = inputNum * inputNum;
+        let result1 = inputNum * 4;
+        document.getElementById('result').innerHTML= "diện tích hình vuông là : " + result;
+        document.getElementById('result1').innerHTML= "chu vi hình vuông là : " + result1;
+
+
+    }
+
+</script>
+</html>

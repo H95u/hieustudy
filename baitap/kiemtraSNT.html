@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let input = +prompt("nhap so N")
+    for (i = 1; i <= input; i++) {
+        if (input % i === 0) {
+            count++
+        }
+    }
+    if (count === 2) {
+        alert("so " + input + " la SNT")
+    } else {
+        alert("so " + input + " khong phai la SNT")
+    }
+
+
+</script>
+
+</body>
+</html>

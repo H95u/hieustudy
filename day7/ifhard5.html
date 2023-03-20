@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    inputNumber1 = parseInt(prompt("nhập vào điểm bài kiểm tra"))
+    inputNumber2 = parseInt(prompt("nhập vào điểm thi giữa kỳ"))
+    inputNumber3 = parseInt(prompt("nhập vào điểm thi cuối kỳ"))
+    let average = (inputNumber1 + inputNumber2 + inputNumber3) / 3
+
+    if (inputNumber1 > 10 || inputNumber1 < 0 || inputNumber2 > 10 || inputNumber2 < 0 || inputNumber3 > 10 || inputNumber3 < 0)
+        alert("nhập sai")
+
+    if (average >= 8)
+        alert("học sinh giỏi")
+    else if (average < 8 && average >= 6.5)
+        alert("học sinh khá")
+    else if (average < 6.5 && average >= 5)
+        alert("học sinh TB")
+    else if (average <5 && average >=3.5)
+        alert("học sinh yếu")
+    else
+        alert("học sinh kém")
+
+
+</script>
+
+</body>
+</html>

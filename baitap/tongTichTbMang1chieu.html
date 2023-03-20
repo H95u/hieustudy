@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = prompt("Nhập mảng ngăn cách bằng dấu phẩy ").split(",")
+    console.log(arr);
+    let sum = 0;
+    let mul = 1;
+    for (i = 0; i < arr.length; i++) {
+        sum += +arr[i]
+        mul *= arr[i]
+    }
+    let avg = sum / arr.length;
+    console.log("tổng của mảng là : " +sum);
+    console.log("tích của mảng là : " +mul);
+    console.log("trung bình của mảng là : " + avg);
+
+
+</script>
+
+</body>
+</html>

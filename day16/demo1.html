@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function Student(id, name, address){
+    //     this.id = id;
+    //     this.name = name;
+    //     this.address = address;
+    //     this.getInfor = function(){
+    //         return "Id=" + this.id + "Name=" + this.name + "adress=" + this.address;
+    //     }
+    // }
+    // let student = new Student(1,"nguyen van a","ha noi");
+    // console.log(student.getInfor());
+    let person = {
+        name: ['Bob', 'Smith'],
+        age: 32,
+        gender: 'male',
+        interests: ['music', 'skiing'],
+        bio: function () {
+            alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+        },
+        greeting: function () {
+            alert('Hi! I\'m ' + this.name[0] + '.');
+        }
+    }
+    person['eyes'] = 'hazel';
+    person.farewell = function() { alert("Bye everybody!"); }
+    person.farewell()
+//     let myDataName = 'height';
+//     let myDataValue = '1.75m';
+//     person[myDataName] = myDataValue;
+// console.log(person.height)
+    let myDataName = nameInput.value;
+    let myDataValue = nameValue.value;
+    person[myDataName] = myDataValue;
+</script>
+
+</body>
+</html>

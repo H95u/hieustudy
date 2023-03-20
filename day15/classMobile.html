@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor() {
+            this.battery = 100;
+            this.drafts = [];
+            this.inbox = [];
+            this.sent = [];
+            this.isOn = false;
+        }
+
+        checkStatus() {
+            return this.isOn && this.battery > 0;
+        }
+
+        turnOn() {
+            if (!this.isOn) {
+                this.isOn = true;
+                this.battery--;
+            }
+        }
+
+        turnOff() {
+            if (this.isOn) {
+                this.isOn = false;
+                this.battery--;
+            }
+        }
+
+        chargeBattery() {
+            this.battery = 100;
+        }
+
+        composeMessage(message) {
+            if (this.checkStatus()) {
+                this.drafts.push(message);
+                this.battery--;
+            }
+        }
+
+        receiveMessage(message) {
+            if (this.checkStatus()) {
+                this.inbox.push(message);
+                this.battery--;
+            }
+        }
+
+        sendMessage(message, mobile) {
+            if (this.checkStatus() && mobile.checkStatus()) {
+                this.sent.push(message);
+                mobile.receiveMessage(message);
+                this.battery--;
+            }
+        }
+
+        readInbox() {
+            if (this.checkStatus()) {
+                return this.inbox;
+            }
+        }
+
+        readSent() {
+            if (this.checkStatus()) {
+                return this.sent;
+            }
+        }
+    }
+
+    let nokia = new Mobile();
+    let iphone = new Mobile();
+    nokia.turnOn();
+    iphone.turnOn();
+
+    nokia.composeMessage('Hello, this is a message from Nokia');
+    nokia.sendMessage(nokia.drafts[0], iphone);
+
+
+    console.log(nokia.battery);
+    console.log(iphone.battery);
+
+    console.log(iphone.readInbox());
+
+</script>
+
+</body>
+</html>

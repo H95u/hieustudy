@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let soDien = +prompt("nhập số điện của bạn")
+  let soTien ;
+
+  if (0 < soDien && soDien <= 50 )
+    soTien = soDien * 1.678
+  else if (50< soDien && soDien <=100 )
+    soTien = (50 * 1.678 + (soDien - 50)*1.734)
+  else if  (100 <soDien && soDien <= 200)
+    soTien = (50 * 1.678 + 50*1.734 + (soDien - 100)*2.014)
+  else if  (200 <soDien && soDien <= 300)
+    soTien = (50 * 1.678 + 50*1.734 + 200*2.014 + (soDien-200)*2.536)
+  else if  (300 <soDien && soDien <= 400)
+    soTien = (50 * 1.678 + 50*1.734 + 200*2.014 + 300*2536 + (soDien-300) *2.834)
+  else
+    soTien = (50 * 1.678 + 50*1.734 + 200*2.014 + 300*2536 +  400*2.834 + (soDien-400)*2.927)
+
+  alert("số tiền điện là : " + soTien + " nghìn đồng" )
+
+
+</script>
+
+</body>
+</html>

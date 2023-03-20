@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = parseInt(prompt("Nhập số lượng phần tử của mảng: "));
+
+    // Lặp để nhập các phần tử vào mảng
+    for (let i = 0; i < n; i++) {
+        let element = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + " của mảng: "));
+        arr.push(element);
+    }
+
+    console.log("Mảng trước khi đảo ngược: " + arr);
+
+    arr.reverse();
+
+    console.log("Mảng sau khi đảo ngược: " + arr);
+
+</script>
+
+</body>
+</html>

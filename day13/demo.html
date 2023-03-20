@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let arr = [];
+for (let i = 0; i < 10; i++) {
+arr.push(Math.floor(Math.random() * 100));
+}
+console.log(arr);
+arr.sort(function(a, b) {
+  return b - a ;
+});
+console.log("mảng được sắp xếp theo thứ tự giảm dần : " +arr)
+</script>
+
+</body>
+</html>
